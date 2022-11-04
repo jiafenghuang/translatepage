@@ -1,0 +1,44 @@
+{
+	"manifest_version": 2,
+	"name": "demo",
+	"version": "1.0.0",
+	"description": "简单的Chrome扩展demo",
+	"icons":{},
+	"background":
+	{
+		"page":"src/html/background.html"
+	},
+	"browser_action": {},
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": [
+                "src/js/lib/jquery.js",
+                "src/js/common.js"
+            ],
+			"css": ["src/css/custom.css"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions":
+	[
+        "contextMenus",
+		"tabs" 
+	],
+  
+	"web_accessible_resources": ["src/js/inject.js"],
+  
+	"homepage_url": "https://www.baidu.com",
+  
+
+	"options_page": "src/html/test.html",
+	"options_ui":
+	{
+		"page": "src/html/test.html",
+		"chrome_style": true
+	},
+  
+	"omnibox": { "keyword" : "go" }
+  
+}
