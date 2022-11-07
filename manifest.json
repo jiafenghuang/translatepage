@@ -14,8 +14,7 @@
 		{
 			"matches": ["<all_urls>"],
 			"js": [
-                "src/js/lib/jquery.js",
-                "src/js/common.js"
+                "src/js/lib/jquery.js"
             ],
 			"css": ["src/css/custom.css"],
 			"run_at": "document_start"
@@ -26,19 +25,13 @@
         "contextMenus",
 		"tabs" 
 	],
-  
-	"web_accessible_resources": ["src/js/inject.js"],
-  
+	"web_accessible_resources": [ "src/js/inject.js" ],
 	"homepage_url": "https://www.baidu.com",
-  
-
 	"options_page": "src/html/test.html",
 	"options_ui":
 	{
 		"page": "src/html/test.html",
 		"chrome_style": true
 	},
-  
 	"omnibox": { "keyword" : "go" }
-  
 }
